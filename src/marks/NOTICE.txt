@@ -1,0 +1,7 @@
+The sayngwyn deer skull mark (in run-label.svg) is © sayngwyn, all
+rights reserved. It is not covered by this
+project's MIT licence and is included only for this theme's Run button.
+Forks must remove or replace it.
+
+The "RUN" lettering in run-label.svg is drawn with Sayngwyn Serif, under
+the SIL Open Font License; the font file itself is not shipped.

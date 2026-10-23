@@ -1,0 +1,5 @@
+# Dev only; nothing here ships. PyQt6 matches MO2 2.5.2's Qt 6.7.
+PyQt6==6.7.1
+PyQt6-Qt6==6.7.3
+pytest==8.3.3
+fonttools==4.54.1

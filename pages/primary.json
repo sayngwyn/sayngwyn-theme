@@ -1,0 +1,26 @@
+{
+ "out": "dist/nexus-upload/primary.png",
+ "name": "Sayngwyn Theme",
+ "line": "My personal dark theme for MO2",
+ "eyebrow": "MOD ORGANIZER 2 THEME",
+ "cards": [
+  {
+   "image": "dist/nexus-upload/shots/main-2x.png",
+   "crop": [
+    22,
+    520,
+    1190,
+    400
+   ]
+  },
+  {
+   "image": "dist/nexus-upload/shots/main-2x.png",
+   "crop": [
+    1250,
+    190,
+    1200,
+    316
+   ]
+  }
+ ]
+}

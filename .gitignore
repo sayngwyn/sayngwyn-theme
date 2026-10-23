@@ -1,0 +1,11 @@
+.venv/
+test-env/
+dist/
+results/
+logs/
+__pycache__/
+*.pyc
+.pytest_cache/
+.pyright/
+deploy-targets.txt
+.claude/

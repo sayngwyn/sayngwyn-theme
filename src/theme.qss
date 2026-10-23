@@ -1,0 +1,804 @@
+/*
+  @name@ - a Mod Organizer 2 theme by sayngwyn
+  Version @version@. Written from scratch; colours and icons are original.
+  Generated from src/theme.qss by scripts/build.py: edit the source, not this file.
+*/
+
+/* ---------- base ---------- */
+
+QWidget {
+  background-color: @bg@;
+  color: @text@;
+  selection-background-color: @sel@;
+  selection-color: @text@;
+}
+
+QWidget:disabled {
+  color: @muted@;
+}
+
+QLabel, QCheckBox, QRadioButton, QGroupBox, QStatusBar QLabel {
+  background: transparent;
+}
+
+QToolTip {
+  background-color: @raised@;
+  color: @text@;
+  border: 1px solid @border@;
+  padding: 4px 6px;
+}
+
+/* ---------- menus ---------- */
+
+QMenuBar {
+  background-color: @bg@;
+  padding: 2px;
+}
+
+QMenuBar::item {
+  background: transparent;
+  padding: 4px 10px;
+  border-radius: 4px;
+}
+
+QMenuBar::item:selected {
+  background-color: @raised@;
+}
+
+QMenuBar::item:pressed {
+  background-color: @sel@;
+}
+
+QMenu {
+  background-color: @raised@;
+  border: 1px solid @border@;
+  padding: 4px;
+}
+
+QMenu::item {
+  background: transparent;
+  padding: 5px 24px 5px 24px;
+  border-radius: 3px;
+}
+
+QMenu::item:selected {
+  background-color: @sel@;
+  color: @text@;
+}
+
+QMenu::item:disabled {
+  color: @muted@;
+}
+
+QMenu::separator {
+  height: 1px;
+  background: @border@;
+  margin: 4px 8px;
+}
+
+QMenu::indicator {
+  width: 14px;
+  height: 14px;
+  left: 4px;
+}
+
+QMenu::indicator:checked {
+  image: url("@dir@/check-on.svg");
+}
+
+QMenu::indicator:unchecked {
+  image: url("@dir@/check-off.svg");
+}
+
+QMenu::right-arrow {
+  image: url("@dir@/chevron-right.svg");
+  width: 12px;
+  height: 12px;
+}
+
+/* ---------- toolbar ---------- */
+
+QToolBar {
+  background-color: @bg@;
+  border: none;
+  padding: 4px;
+  spacing: 4px;
+}
+
+QToolBar::separator {
+  background: @border@;
+  width: 1px;
+  margin: 6px 6px;
+}
+
+QToolButton {
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  padding: 3px;
+}
+
+QToolButton:hover {
+  background-color: @silver_fill_hover@;
+  border-color: @silver_line@;
+}
+
+QToolButton:pressed, QToolButton:checked {
+  background-color: @silver_fill_press@;
+}
+
+/* Main toolbar: a soft raised square on hover; the icon keeps its colour. */
+QToolBar QToolButton:hover {
+  background-color: @raised@;
+  border-color: transparent;
+}
+
+QToolBar QToolButton:pressed {
+  background-color: @border@;
+}
+
+QToolButton::menu-indicator {
+  image: url("@dir@/chevron-down.svg");
+  width: 8px;
+  height: 8px;
+  subcontrol-position: bottom right;
+}
+
+QToolButton[popupMode="1"] {
+  padding-right: 14px;
+}
+
+QToolButton::menu-button {
+  border: none;
+  width: 14px;
+}
+
+QToolButton::menu-arrow {
+  image: url("@dir@/chevron-down.svg");
+  width: 8px;
+  height: 8px;
+}
+
+/* ---------- buttons ---------- */
+
+QPushButton {
+  background-color: transparent;
+  color: @text@;
+  border: 1px solid @silver_line@;
+  border-radius: 4px;
+  padding: 4px 14px;
+  min-height: 18px;
+}
+
+QPushButton:hover {
+  background-color: @silver_fill_hover@;
+  border-color: @silver_line_hover@;
+}
+
+QPushButton:pressed {
+  background-color: @silver_fill_press@;
+}
+
+QPushButton:checked {
+  background-color: @accent@;
+  border-color: @accent@;
+  color: @white@;
+}
+
+QPushButton:checked:hover {
+  background-color: @accent_hover@;
+  border-color: @accent_hover@;
+}
+
+QPushButton:default {
+  border-color: @text@;
+}
+
+QPushButton:disabled {
+  color: @muted@;
+  border-color: @silver_line_off@;
+  background-color: transparent;
+}
+
+QPushButton:focus, QToolButton:focus {
+  outline: none;
+}
+
+QPushButton::menu-indicator {
+  image: url("@dir@/chevron-down.svg");
+  width: 10px;
+  height: 10px;
+  subcontrol-origin: padding;
+  subcontrol-position: center right;
+  right: 6px;
+}
+
+/* The one main action: Run. Large, with the program picker beside it,
+   because these two are used more than anything else. A dark button with
+   a red glow and edge, so the logo's and the lettering's own red shadows
+   show. The label image (run-label.svg: skull + "RUN" in Sayngwyn Serif)
+   carries the word, so MO2's own text is shrunk and made invisible. */
+QPushButton#startButton {
+  background-color: qradialgradient(cx:0.5, cy:0.5, radius:0.75, fx:0.5, fy:0.5,
+                                    stop:0 @glow@, stop:1 @panel@);
+  border: 2px solid @accent@;
+  border-radius: 6px;
+  color: transparent;
+  font-size: 1px;
+  padding: 0 18px;
+  min-width: 200px;
+  min-height: 72px;
+  max-height: 72px;
+  /* MO2's .ui sets Run's iconSize, so a plain icon-size rule loses to it. */
+  qproperty-iconSize: 166px 64px;
+  qproperty-icon: url("@dir@/run-label.svg");
+}
+
+/* Same 76 px visible height as Run. MO2 centres this box against the
+   Run + Shortcut column, so a bottom margin as tall as the gap plus
+   Shortcut (6 + 28 px) lifts it level with Run, top and bottom. */
+QComboBox#executablesListBox {
+  font-size: 14pt;
+  font-weight: bold;
+  min-height: 68px;
+  max-height: 68px;
+  margin-bottom: 34px;
+  padding-left: 10px;
+  qproperty-iconSize: 40px 40px;
+}
+
+QPushButton#linkButton {
+  min-height: 18px;
+  max-height: 18px;
+}
+
+QPushButton#startButton:hover {
+  background-color: qradialgradient(cx:0.5, cy:0.5, radius:0.75, fx:0.5, fy:0.5,
+                                    stop:0 @glow_hover@, stop:1 @panel@);
+  border-color: @accent_hover@;
+}
+
+QPushButton#startButton:pressed {
+  background-color: @run_pressed@;
+  border-color: @accent@;
+}
+
+QPushButton#startButton:disabled {
+  background-color: @raised@;
+  border-color: @border@;
+}
+
+QPushButton#linkButton {
+  qproperty-icon: url("@dir@/shortcut.svg");
+}
+
+/* ---------- inputs ---------- */
+
+QLineEdit, QTextEdit, QPlainTextEdit, QAbstractSpinBox, QComboBox, QKeySequenceEdit {
+  background-color: @panel@;
+  color: @text@;
+  border: 1px solid @border@;
+  border-radius: 4px;
+  padding: 3px 6px;
+}
+
+QLineEdit:hover, QAbstractSpinBox:hover, QComboBox:hover {
+  border-color: @stripe@;
+}
+
+QLineEdit:focus, QTextEdit:focus, QPlainTextEdit:focus, QAbstractSpinBox:focus, QComboBox:focus {
+  border-color: @text@;
+}
+
+QLineEdit:disabled, QAbstractSpinBox:disabled, QComboBox:disabled {
+  color: @muted@;
+  background-color: @bg@;
+}
+
+QTextEdit, QPlainTextEdit {
+  padding: 2px;
+}
+
+QComboBox {
+  padding-right: 24px;
+}
+
+QComboBox::drop-down {
+  subcontrol-origin: padding;
+  subcontrol-position: center right;
+  width: 22px;
+  border: none;
+  background: transparent;
+}
+
+QComboBox::down-arrow {
+  image: url("@dir@/chevron-down.svg");
+  width: 10px;
+  height: 10px;
+}
+
+QComboBox::down-arrow:on {
+  image: url("@dir@/chevron-up.svg");
+}
+
+QComboBox QAbstractItemView {
+  background-color: @raised@;
+  border: 1px solid @border@;
+  selection-background-color: @sel@;
+  selection-color: @text@;
+  outline: none;
+}
+
+QAbstractSpinBox {
+  padding-right: 18px;
+}
+
+QAbstractSpinBox::up-button, QAbstractSpinBox::down-button {
+  subcontrol-origin: border;
+  width: 16px;
+  border: none;
+  background: transparent;
+}
+
+QAbstractSpinBox::up-button {
+  subcontrol-position: top right;
+}
+
+QAbstractSpinBox::down-button {
+  subcontrol-position: bottom right;
+}
+
+QAbstractSpinBox::up-button:hover, QAbstractSpinBox::down-button:hover {
+  background-color: @silver_fill_hover@;
+}
+
+QAbstractSpinBox::up-arrow {
+  image: url("@dir@/chevron-up.svg");
+  width: 8px;
+  height: 8px;
+}
+
+QAbstractSpinBox::down-arrow {
+  image: url("@dir@/chevron-down.svg");
+  width: 8px;
+  height: 8px;
+}
+
+/* ---------- checkboxes and radios ---------- */
+
+QCheckBox, QRadioButton {
+  spacing: 6px;
+}
+
+QCheckBox::indicator, QAbstractItemView::indicator, QGroupBox::indicator {
+  width: 14px;
+  height: 14px;
+}
+
+QCheckBox::indicator:unchecked, QAbstractItemView::indicator:unchecked, QGroupBox::indicator:unchecked {
+  image: url("@dir@/check-off.svg");
+}
+
+QCheckBox::indicator:unchecked:hover, QAbstractItemView::indicator:unchecked:hover, QGroupBox::indicator:unchecked:hover {
+  image: url("@dir@/check-off-hover.svg");
+}
+
+QCheckBox::indicator:checked, QAbstractItemView::indicator:checked, QGroupBox::indicator:checked {
+  image: url("@dir@/check-on.svg");
+}
+
+QCheckBox::indicator:checked:hover, QAbstractItemView::indicator:checked:hover, QGroupBox::indicator:checked:hover {
+  image: url("@dir@/check-on-hover.svg");
+}
+
+QCheckBox::indicator:indeterminate, QAbstractItemView::indicator:indeterminate {
+  image: url("@dir@/check-partial.svg");
+}
+
+QCheckBox::indicator:disabled, QAbstractItemView::indicator:disabled {
+  image: url("@dir@/check-disabled.svg");
+}
+
+QCheckBox::indicator:checked:disabled, QAbstractItemView::indicator:checked:disabled {
+  image: url("@dir@/check-on-disabled.svg");
+}
+
+QRadioButton::indicator {
+  width: 14px;
+  height: 14px;
+}
+
+QRadioButton::indicator:unchecked {
+  image: url("@dir@/radio-off.svg");
+}
+
+QRadioButton::indicator:unchecked:hover {
+  image: url("@dir@/radio-off-hover.svg");
+}
+
+QRadioButton::indicator:checked {
+  image: url("@dir@/radio-on.svg");
+}
+
+QRadioButton::indicator:disabled {
+  image: url("@dir@/radio-disabled.svg");
+}
+
+/* ---------- lists, trees and tables ---------- */
+
+QAbstractItemView {
+  background-color: @panel@;
+  alternate-background-color: @alt@;
+  border: 1px solid @border@;
+  border-radius: 4px;
+  outline: none;
+}
+
+QAbstractItemView:focus {
+  border-color: @stripe@;
+}
+
+/* Only hover and selection are styled per item, so MO2's own row colours
+   (conflicts, separators, highlights) still show. */
+QAbstractItemView::item:hover {
+  background-color: @sel_hover@;
+  color: @text@;
+}
+
+QAbstractItemView::item:selected {
+  background-color: @sel@;
+  color: @text@;
+}
+
+/* A bone edge marks the selected row as well as its fill, because MO2's
+   default "is overwriting" highlight is a red close to @sel@. Only the
+   selected row gets borders: any border rule on every row makes Qt paint
+   rows itself and drop MO2's conflict colours (seen in the test MO2). */
+QAbstractItemView::item:selected {
+  border-top: 1px solid @text@;
+  border-bottom: 1px solid @text@;
+}
+
+/* No padding on other rows to make up the 3 px: MO2's mod list draws its
+   check box without the padding, so text then runs under the box. */
+QAbstractItemView::item:selected:first {
+  border-left: 3px solid @text@;
+}
+
+QTreeView::branch {
+  background: transparent;
+}
+
+QTreeView::branch:hover {
+  background-color: @sel_hover@;
+}
+
+QTreeView::branch:selected {
+  background-color: @sel@;
+}
+
+QTreeView::branch:has-children:closed {
+  image: url("@dir@/chevron-right.svg");
+}
+
+QTreeView::branch:has-children:open {
+  image: url("@dir@/chevron-down.svg");
+}
+
+QHeaderView {
+  background-color: @panel@;
+  border: none;
+}
+
+QHeaderView::section {
+  background-color: @raised@;
+  color: @text@;
+  border: none;
+  border-right: 1px solid @border@;
+  border-bottom: 1px solid @border@;
+  padding: 4px 4px;
+}
+
+QHeaderView::section:last {
+  border-right: none;
+}
+
+QHeaderView::section:hover {
+  background-color: @sel_hover@;
+}
+
+QHeaderView::up-arrow {
+  image: url("@dir@/chevron-up.svg");
+  width: 9px;
+  height: 9px;
+  subcontrol-position: center right;
+  right: 4px;
+}
+
+QHeaderView::down-arrow {
+  image: url("@dir@/chevron-down.svg");
+  width: 9px;
+  height: 9px;
+  subcontrol-position: center right;
+  right: 4px;
+}
+
+QTableCornerButton::section {
+  background-color: @raised@;
+  border: none;
+}
+
+/* ---------- tabs ---------- */
+
+QTabWidget::pane {
+  border: 1px solid @border@;
+  border-radius: 4px;
+  top: -1px;
+}
+
+QTabWidget::tab-bar {
+  alignment: center;
+}
+
+QTabBar {
+  background: transparent;
+}
+
+QTabBar::tab {
+  background-color: transparent;
+  color: @text@;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  padding: 5px 14px;
+  margin: 2px;
+}
+
+QTabBar::tab:hover {
+  background-color: @silver_fill_hover@;
+  border-color: @silver_line@;
+}
+
+QTabBar::tab:selected {
+  background-color: @accent@;
+  border-color: @accent@;
+  color: @white@;
+}
+
+QTabBar::tab:disabled {
+  color: @muted@;
+}
+
+QTabBar::scroller {
+  width: 20px;
+}
+
+QTabBar QToolButton {
+  background-color: @bg@;
+}
+
+QTabBar::close-button {
+  image: url("@dir@/cross.svg");
+}
+
+/* ---------- scrollbars ---------- */
+
+QScrollBar:vertical {
+  background: @panel@;
+  width: 10px;
+  margin: 0;
+  border: none;
+}
+
+QScrollBar:horizontal {
+  background: @panel@;
+  height: 10px;
+  margin: 0;
+  border: none;
+}
+
+QScrollBar::handle:vertical {
+  background: @scroll@;
+  min-height: 28px;
+  border-radius: 4px;
+  margin: 1px 2px;
+}
+
+QScrollBar::handle:horizontal {
+  background: @scroll@;
+  min-width: 28px;
+  border-radius: 4px;
+  margin: 2px 1px;
+}
+
+QScrollBar::handle:hover, QScrollBar::handle:pressed {
+  background: @scroll_hover@;
+}
+
+QScrollBar::add-line, QScrollBar::sub-line {
+  width: 0;
+  height: 0;
+  border: none;
+  background: none;
+}
+
+QScrollBar::add-page, QScrollBar::sub-page {
+  background: none;
+}
+
+QAbstractScrollArea::corner {
+  background: @panel@;
+  border: none;
+}
+
+/* ---------- frames, groups and panes ---------- */
+
+QGroupBox {
+  border: 1px solid @border@;
+  border-radius: 4px;
+  margin-top: 14px;
+  padding: 8px 6px 6px 6px;
+}
+
+QGroupBox::title {
+  subcontrol-origin: margin;
+  subcontrol-position: top left;
+  left: 8px;
+  padding: 0 4px;
+  color: @text@;
+  font-weight: bold;
+}
+
+QSplitter::handle {
+  background-color: @bg@;
+}
+
+QSplitter::handle:hover {
+  background-color: @border@;
+}
+
+QSplitter::handle:horizontal {
+  width: 4px;
+}
+
+QSplitter::handle:vertical {
+  height: 4px;
+}
+
+QDockWidget {
+  color: @text@;
+  titlebar-close-icon: url("@dir@/cross.svg");
+  titlebar-normal-icon: url("@dir@/restore-window.svg");
+}
+
+QDockWidget::title {
+  background-color: @raised@;
+  padding: 4px 6px;
+  text-align: left;
+}
+
+QDockWidget::close-button, QDockWidget::float-button {
+  border: none;
+  background: transparent;
+  padding: 1px;
+}
+
+QDockWidget::close-button:hover, QDockWidget::float-button:hover {
+  background-color: @silver_fill_hover@;
+}
+
+QStatusBar {
+  background-color: @bg@;
+  color: @muted@;
+  border-top: 1px solid @border@;
+}
+
+QStatusBar::item {
+  border: none;
+}
+
+QProgressBar {
+  background-color: @panel@;
+  border: 1px solid @border@;
+  border-radius: 4px;
+  color: @text@;
+  text-align: center;
+  min-height: 14px;
+}
+
+QProgressBar::chunk {
+  background-color: @sel@;
+  border-radius: 3px;
+}
+
+QSlider::groove:horizontal {
+  height: 4px;
+  background: @border@;
+  border-radius: 2px;
+}
+
+QSlider::sub-page:horizontal {
+  background: @sel@;
+  border-radius: 2px;
+}
+
+QSlider::handle:horizontal {
+  background: @text@;
+  width: 12px;
+  height: 12px;
+  margin: -4px 0;
+  border-radius: 6px;
+}
+
+QSlider::groove:vertical {
+  width: 4px;
+  background: @border@;
+  border-radius: 2px;
+}
+
+QSlider::handle:vertical {
+  background: @text@;
+  width: 12px;
+  height: 12px;
+  margin: 0 -4px;
+  border-radius: 6px;
+}
+
+QLCDNumber {
+  background: transparent;
+  color: @text@;
+  border: none;
+  qproperty-segmentStyle: Flat;
+}
+
+/* MO2 gives the mod counter no minimum width, which squeezes its digits. */
+QLCDNumber#activeModsCounter, QLCDNumber#activePluginsCounter {
+  min-width: 64px;
+}
+
+/* ---------- MO2: icons ---------- */
+
+#actionChange_Game { qproperty-icon: url("@dir@/instances.svg"); }
+#actionInstallMod { qproperty-icon: url("@dir@/install.svg"); }
+#actionNexus { qproperty-icon: url("@dir@/globe.svg"); }
+#actionModPage { qproperty-icon: url("@dir@/globe.svg"); }
+#actionAdd_Profile { qproperty-icon: url("@dir@/profiles.svg"); }
+#action_Refresh { qproperty-icon: url("@dir@/refresh.svg"); }
+#actionModify_Executables { qproperty-icon: url("@dir@/executables.svg"); }
+#actionTool { qproperty-icon: url("@dir@/tools.svg"); }
+#actionSettings { qproperty-icon: url("@dir@/settings.svg"); }
+#actionEndorseMO { qproperty-icon: url("@dir@/heart.svg"); }
+/* MO2 paints its problem count on top of this icon and greys it when there are none. */
+#actionNotifications { qproperty-icon: url("@dir@/warning.svg"); }
+#actionUpdate { qproperty-icon: url("@dir@/update.svg"); }
+#actionHelp { qproperty-icon: url("@dir@/help.svg"); }
+
+/* Everything below is scoped to the MO2 window that owns it, so a plugin
+   widget that happens to share a name keeps its own icon. (The action
+   rules above can't be scoped: MO2 resolves them on a detached button.) */
+MainWindow #listOptionsBtn { qproperty-icon: url("@dir@/dots.svg"); }
+MainWindow #openFolderMenu { qproperty-icon: url("@dir@/folder.svg"); }
+MainWindow #restoreModsButton, MainWindow #restoreButton { qproperty-icon: url("@dir@/restore.svg"); }
+MainWindow #saveModsButton, MainWindow #saveButton { qproperty-icon: url("@dir@/save.svg"); }
+MainWindow #bossButton { qproperty-icon: url("@dir@/sort.svg"); }
+MainWindow #btnRefreshData, MainWindow #btnRefreshDownloads, MainWindow #dataTabRefresh {
+  qproperty-icon: url("@dir@/refresh.svg");
+}
+ModInfoDialog #refresh { qproperty-icon: url("@dir@/refresh.svg"); }
+MainWindow #clearFiltersButton { qproperty-icon: url("@dir@/cross.svg"); }
+EditExecutablesDialog #add, InstanceManagerDialog #createNew { qproperty-icon: url("@dir@/plus.svg"); }
+EditExecutablesDialog #remove { qproperty-icon: url("@dir@/minus.svg"); }
+EditExecutablesDialog #up { qproperty-icon: url("@dir@/chevron-up.svg"); }
+EditExecutablesDialog #down { qproperty-icon: url("@dir@/chevron-down.svg"); }
+EditExecutablesDialog QToolButton#reset { qproperty-icon: url("@dir@/broom.svg"); }
+
+/* ---------- MO2: panes and counters ---------- */
+
+MainWindow #displayCategoriesBtn, MainWindow #listOptionsBtn, MainWindow #openFolderMenu,
+MainWindow #restoreModsButton, MainWindow #saveModsButton, MainWindow #restoreButton,
+MainWindow #saveButton, MainWindow #bossButton {
+  padding: 4px 6px;
+}
+
+QLabel#activeModslabel, QLabel#activePluginsLabel {
+  color: @muted@;
+}
