@@ -88,6 +88,11 @@ screenshot and your MO2 version. You can also find me on [Discord](https://disco
 
 ---
 
+## Credits
+
+- **The Mod Organizer 2 team** for Mod Organizer 2, the program this skins.
+- **Natanael Gama and Christian Thalmann** for Cinzel and Cormorant Garamond, the typefaces behind the "RUN" lettering.
+
 Made with AI. Claude contributed heavily under my direction: I decided what it does and how it looks and checked it, and
 the AI wrote most of the stylesheet, its icons, tests and these docs. It was checked live in a real Mod Organizer 2 with
 Skyrim Special Edition and Fallout 4 before release.

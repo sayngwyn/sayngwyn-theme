@@ -35,6 +35,7 @@ IMAGES = {  # {IMG:key} in page.bbcode -> local file (on Nexus: hosted on sayngw
     **{f"strip-{s}": PAGE / f"strip-{s}-v1.png" for s in ("how-it-looks", "what-you-get", "install", "good-to-know")},
     "mod-list": UP / "shots" / "mod-list.png",
     "run-area": UP / "shots" / "run-area.png",
+    "toolbar": UP / "shots" / "toolbar.png",
 }
 # The gallery holds the first image and the real screenshots only (page v3).
 GALLERY = [UP / "primary.png", IMAGES["mod-list"], IMAGES["run-area"]]

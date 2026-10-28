@@ -127,7 +127,8 @@ def test_package_ships_only_what_the_theme_uses() -> None:
     sheets = build.build(build.ROOT / "dist" / "test-build")
     shipped = {p.name for p in (sheets / build.NAME).iterdir()}
     used = build.referenced_icons(build.render_qss())
-    assert shipped == used | {"NOTICE.txt"}, shipped ^ (used | {"NOTICE.txt"})
+    expected = used | {"NOTICE.txt", "LICENSE.txt"}  # the notice for the mark, the licence for the rest
+    assert shipped == expected, shipped ^ expected
 
 
 def test_mark_ships_with_its_notice() -> None:

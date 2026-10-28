@@ -66,6 +66,9 @@ def build(out: Path) -> Path:
     for mark in sorted(MARKS.iterdir()):
         if mark.name in used:
             shutil.copy2(mark, sheets / NAME / mark.name)
+    # the licence travels with the theme (LF line endings, so the zip stays byte-identical on every build)
+    licence = (ROOT / "LICENSE").read_text(encoding="utf-8").replace("\r\n", "\n")
+    (sheets / NAME / "LICENSE.txt").write_bytes(licence.encode("utf-8"))
     return sheets
 
 

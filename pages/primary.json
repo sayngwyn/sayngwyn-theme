@@ -7,20 +7,28 @@
   {
    "image": "dist/nexus-upload/shots/main-2x.png",
    "crop": [
-    22,
-    520,
-    1190,
-    400
-   ]
+    20,
+    320,
+    1180,
+    600
+   ],
+   "share": 0.8
   },
   {
    "image": "dist/nexus-upload/shots/main-2x.png",
    "crop": [
     1250,
     190,
-    1200,
-    316
-   ]
+    1230,
+    600
+   ],
+   "share": 0.95
   }
+ ],
+ "cards_area": [
+  0.47,
+  0.23,
+  0.46,
+  0.52
  ]
 }
