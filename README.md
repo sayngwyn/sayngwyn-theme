@@ -58,11 +58,9 @@ Don't install it as a mod from MO2's Downloads tab: themes go in MO2's own `styl
 
 ## More by sayngwyn
 
-- **[Creations Browser](https://www.nexusmods.com/site/mods/2483)**: Browse Creations, download the free ones. ([source](https://github.com/sayngwyn/creations-browser))
-- **[Hide Buttons](https://www.nexusmods.com/site/mods/1619)**: Hide the MO2 buttons you never use. ([source](https://github.com/sayngwyn/hide-buttons))
-- **[Modlist Companion](https://www.nexusmods.com/site/mods/2491)**: Remembers every FOMOD choice you made in MO2. ([source](https://github.com/sayngwyn/modlist-companion))
+[![All my mods on Nexus, every game](https://sayngwyn.com/img/mods/button-all-mods-v1.png)](https://www.nexusmods.com/profile/sayngwyn/mods)
 
-All my mods: [Nexus](https://www.nexusmods.com/profile/sayngwyn/mods) · [Website](https://sayngwyn.com/projects)
+Also on [my website](https://sayngwyn.com/projects).
 
 <details><summary>Build it yourself</summary>
 
