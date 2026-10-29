@@ -84,7 +84,7 @@ environment.
 ## Report a problem
 
 Open an issue on [GitHub](https://github.com/sayngwyn/sayngwyn-theme/issues) or post in **Bugs** on the Nexus page, with a
-screenshot and your MO2 version. You can also find me on [Discord](https://discord.gg/QZHymBYMxP).
+screenshot and your MO2 version. You can also find me on [Discord](https://discord.com/invite/sayngwyn).
 
 ---
 
