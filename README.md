@@ -58,7 +58,7 @@ Don't install it as a mod from MO2's Downloads tab: themes go in MO2's own `styl
 
 ## More by sayngwyn
 
-[![All my mods on Nexus, every game](https://sayngwyn.com/img/mods/button-all-mods-v1.png)](https://www.nexusmods.com/profile/sayngwyn/mods)
+[![All my mods on Nexus, every game](https://sayngwyn.com/img/mods/button-all-mods-v2.png)](https://www.nexusmods.com/profile/sayngwyn/mods)
 
 Also on [my website](https://sayngwyn.com/projects).
 
