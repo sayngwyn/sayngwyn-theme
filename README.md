@@ -2,8 +2,7 @@
 <img alt="Sayngwyn Theme, a Mod Organizer 2 theme" src="docs/header.png">
 </p>
 
-A dark theme for [Mod Organizer 2](https://github.com/ModOrganizer2/modorganizer) (MO2) in the colours of my
-personal OC and upcoming VTuber model: near-black, bone-white and blood red, with red kept for what you've selected and
+A dark theme for [Mod Organizer 2](https://github.com/ModOrganizer2/modorganizer) (MO2) in sayngwyn's colours: near-black, bone-white and blood red, with red kept for what you've selected and
 the button you press most. Written from scratch, with its own icons.
 
 <p align="center"><picture>
