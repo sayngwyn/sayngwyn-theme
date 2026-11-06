@@ -57,7 +57,7 @@ Don't install it as a mod from MO2's Downloads tab: themes go in MO2's own `styl
 
 ## More by sayngwyn
 
-[![All my mods on Nexus, every game](https://sayngwyn.com/img/mods/button-all-mods-v3.png)](https://www.nexusmods.com/profile/sayngwyn/mods)
+[![All my mods on Nexus, every game](https://sayngwyn.com/img/mods/button-all-mods-v4.png)](https://www.nexusmods.com/profile/sayngwyn/mods)
 
 Also on [my website](https://sayngwyn.com/projects).
 
@@ -82,8 +82,14 @@ environment.
 
 ## Report a problem
 
-Open an issue on [GitHub](https://github.com/sayngwyn/sayngwyn-theme/issues) or post in **Bugs** on the Nexus page, with a
-screenshot and your MO2 version. You can also find me on [Discord](https://discord.com/invite/sayngwyn).
+**Found a bug?** Open an issue on [GitHub](https://github.com/sayngwyn/sayngwyn-theme/issues) or post on the Nexus page's
+Bugs tab, with your MO2 version, what you saw, and a screenshot. I need the screenshot for every report, because it shows
+what the theme actually drew.
+
+Reports without a screenshot and your MO2 version are closed after 14 days. Post them later and I'll reopen the report.
+
+Screenshots can show your Windows username in a title bar, so crop it out. You can also bring it to
+[Discord](https://discord.com/invite/sayngwyn).
 
 ---
 
