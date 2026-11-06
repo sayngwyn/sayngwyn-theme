@@ -19,7 +19,7 @@ from icons import build_icons  # noqa: E402
 from palette import TOKENS  # noqa: E402
 
 NAME = "sayngwyn"  # theme name: file names and MO2's style list
-VERSION = "1.0.0"
+VERSION = "1.0.1"
 
 ROOT = Path(__file__).resolve().parent.parent
 SRC = ROOT / "src" / "theme.qss"

@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.1
+
+The MIT licence text now ships inside the download (stylesheets/sayngwyn/LICENSE.txt). The theme itself is unchanged.
+
 ## 1.0.0
 
 First release. A new dark theme for Mod Organizer 2 in sayngwyn's colours, written from scratch.
